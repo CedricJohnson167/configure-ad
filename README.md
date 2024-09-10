@@ -78,7 +78,28 @@ Now that Vms are extablished we are going to install active directory domain ser
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="1225" alt="Screenshot 2024-09-10 at 5 52 25 PM" src="https://github.com/user-attachments/assets/1d293081-c11a-4aad-aadf-18478835baf5">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 52 35 PM" src="https://github.com/user-attachments/assets/e3cc2852-1b0c-4a91-8dbf-6c03d4acac3f">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 52 44 PM" src="https://github.com/user-attachments/assets/b8e8188f-5363-47c3-936f-a14b6bda8836">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 53 25 PM" src="https://github.com/user-attachments/assets/fd2b35aa-3a27-4a34-9be9-6769a60c34d6">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 53 25 PM" src="https://github.com/user-attachments/assets/658e6260-ce9a-4cf5-9aaa-5278ea3ca2fd">
+  <img width="1225" alt="Screenshot 2024-09-10 at 5 53 37 PM" src="https://github.com/user-attachments/assets/ada35f74-cc45-432f-adf4-d59bd3cbf54b">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 53 47 PM" src="https://github.com/user-attachments/assets/7878c4ce-a39e-428a-9c86-466066bc3bd8">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 53 59 PM" src="https://github.com/user-attachments/assets/4bfd7a3b-3823-4ec9-b7ac-4c70082c48f7">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 54 11 PM" src="https://github.com/user-attachments/assets/9d95fe03-31ab-42e6-bd57-a0eda6555813">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 54 15 PM" src="https://github.com/user-attachments/assets/1aab08b3-4657-44d5-8605-b73182a1dbd3">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 56 10 PM" src="https://github.com/user-attachments/assets/0e9ec384-6f62-49fe-99e4-c388a24c647b">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 56 18 PM" src="https://github.com/user-attachments/assets/c36b4448-c836-4081-aacb-42113afc87d3">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 56 48 PM" src="https://github.com/user-attachments/assets/080e5ced-e16e-48c8-bd02-fafb5e899f7f">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 57 43 PM" src="https://github.com/user-attachments/assets/0c6e4920-406d-4d55-8087-9b428f179068">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 57 58 PM" src="https://github.com/user-attachments/assets/8769ff74-da7c-4ccb-acdb-5bd8b467d3a9">
+<img width="1225" alt="Screenshot 2024-09-10 at 5 59 51 PM" src="https://github.com/user-attachments/assets/af2a095a-3075-4e54-8d20-e0eccfb9c16c">
+<img width="1225" alt="Screenshot 2024-09-10 at 6 00 21 PM" src="https://github.com/user-attachments/assets/103decf3-bc41-4ad9-aa44-9b08401f16cb">
+<img width="1225" alt="Screenshot 2024-09-10 at 6 01 13 PM" src="https://github.com/user-attachments/assets/3701883f-ff49-417f-86ce-0f2b081b48a2">
+<img width="1225" alt="Screenshot 2024-09-10 at 6 01 36 PM" src="https://github.com/user-attachments/assets/4ef8ba99-184f-45d1-81bd-9f2ac56369f0">
+<img width="1225" alt="Screenshot 2024-09-10 at 6 01 44 PM" src="https://github.com/user-attachments/assets/8cda5dd3-aa5a-4589-866a-d8646a52f16a">
+<img width="1225" alt="Screenshot 2024-09-10 at 6 02 04 PM" src="https://github.com/user-attachments/assets/f1425c10-3a60-458a-ab96-8bb3a892ed36">
+
 </p>
 <p>
 Now that Client-1 is established as mydomain.com/jane_admin, login to client-1 using those credentials, open system properties, click remote desktop,allow domain users to access to remote desktop.you can now login to Client-1 as a normal, non administator user now.Next we are going to create a bunch of additional users and attempt to login to client-1 with one of the gernerated users,users will populate under _Employees in Active directory. Take one of the random generated accounts and lock self out, and then observe that account has been locked out within active directory and unlock account, reset password, ateempt to login with it, and finally enable and disable accounts.
