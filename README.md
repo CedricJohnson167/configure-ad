@@ -102,6 +102,6 @@ Now that Vms are extablished we are going to install active directory domain ser
 
 </p>
 <p>
-Now that Client-1 is established as mydomain.com/jane_admin, login to client-1 using those credentials, open system properties, click remote desktop,allow domain users to access to remote desktop.you can now login to Client-1 as a normal, non administator user now.Next we are going to create a bunch of additional users and attempt to login to client-1 with one of the gernerated users,users will populate under _Employees in Active directory. Take one of the random generated accounts and lock self out, and then observe that account has been locked out within active directory and unlock account, reset password, ateempt to login with it, and finally enable and disable accounts.
+Now that Client-1 is established as mydomain.com/jane_admin, login to client-1 using those credentials, open system properties, click remote desktop,allow domain users to access to remote desktop.you can now login to Client-1 as a normal, non administator user now.Next we are going to create a bunch of additional users using Powershellinputting a script and attempt to login to client-1 with one of the gernerated users,users will populate under _Employees in Active directory. Take one of the random generated accounts and lock self out, and then observe that account has been locked out within active directory and unlock account, reset password, ateempt to login with it, and finally enable and disable accounts.
 </p>
 <br />
