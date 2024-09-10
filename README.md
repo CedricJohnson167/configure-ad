@@ -23,7 +23,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>High-Level Deployment and Configuration Steps</h2>
 
 - Step 1 Setup virtual infrastructure within azure using Vms & Vnets and deploy them
-- Step Via Vms connect Client vm to Direct controller(ADMIN ACC) Vm via private ip address and deploy Active Directory  
+- Step 2 Via Vms connect Client vm to Direct controller(ADMIN ACC) Vm via private ip address and deploy Active Directory  
 - Step 3 Add Over 2000+ randomly genderated user accounts via Powershell with in Direct Controller(ADMIN ACC)
 - Step 4 reset passwords, change password,and via Group policy and management accounts settings apply policy regarding account lockout attempts and login attempts 
 
