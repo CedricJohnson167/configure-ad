@@ -45,7 +45,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
   <img width="1373" alt="Screenshot 2024-09-10 at 11 32 01 AM" src="https://github.com/user-attachments/assets/ff251771-fc51-4f73-9d4d-7736548346ea">
 </p>
 <p>
-Winthin Azure create a resource group for your resouces and have it named "Active-Directory"and have resource group located in your region.Next create a virtual network and subnet, and then go to virtual matchine and create it nameing it DC-1(for domain controller).Make sure the OS is operating as WINDOWS SERVER 2022, and username and password"anything thats good for you to remember" then hit review and create and create.After the vm is created set the network ip address to static and login and disable firewall.Now that the Domain Controller(Admin ACC) is created rinse and repeat for a Client VM with minor differences like, OS will be an Windows 10 system name it client-1 and make sure to attach vm to the same region and Vnet as DC-1.
+COMPLETED
+  Winthin Azure create a resource group for your resouces and have it named "Active-Directory"and have resource group located in your region.Next create a virtual network and subnet, and then go to virtual matchine and create it nameing it DC-1(for domain controller).Make sure the OS is operating as WINDOWS SERVER 2022, and username and password"anything thats good for you to remember" then hit review and create and create.After the vm is created set the network ip address to static and login and disable firewall.Now that the Domain Controller(Admin ACC) is created rinse and repeat for a Client VM with minor differences like, OS will be an Windows 10 system name it client-1 and make sure to attach vm to the same region and Vnet as DC-1.
 </p>
 <br />
 
@@ -73,6 +74,7 @@ Winthin Azure create a resource group for your resouces and have it named "Activ
 <img width="1225" alt="Screenshot 2024-09-10 at 2 38 01 PM" src="https://github.com/user-attachments/assets/1dff4a51-3609-46ed-92cf-64c2fece23bd">
 </p>
 <p>
+  Completed
 Now that Vms are extablished we are going to install active directory domain services and promote DC-1 as an actual DC"im going to setup a new forest as mydomain.com" then restart DC-1. now that its a actual DC the username to get into DC-1 vm is now mydomain.com\labuser"password still the same"and now that ACTIVE DIRECTORY is installed we are going to add a domain admin user with the domain.Going to Active directory users and computers create an organzation unit name emplyees and one name admins now we are going to create an admin(JANE DOE WILL BE MY DOMAIN ADMIN) username will be Jane_admin with a password of choosing.But because jane_admin is added to admins folder its not yet an admin untill we add jane_admin to SECURITY GROUPS,then after that log out of DC-1 AND Log backin as mydomain.com\jane_admin, and that will be our new admin account.Now login to Client-1 vm with original credintals and join it to the domain vm will restart,and after that log into DC-1 and verify Client-1 shows up in computers and Create a new Organization unit file and name it _Clients and drag Clinet-1 into there.
 </p>
 <br />
@@ -102,6 +104,7 @@ Now that Vms are extablished we are going to install active directory domain ser
 
 </p>
 <p>
+  Completed
 Now that Client-1 is established as mydomain.com/jane_admin, login to client-1 using those credentials, open system properties, click remote desktop,allow domain users to access to remote desktop.you can now login to Client-1 as a normal, non administator user now.Next we are going to create a bunch of additional users using Powershellinputting a script and attempt to login to client-1 with one of the gernerated users,users will populate under _Employees in Active directory. Take one of the random generated accounts and lock self out, and then observe that account has been locked out within active directory and unlock account, reset password, ateempt to login with it, and finally enable and disable accounts.
 </p>
 <br />
