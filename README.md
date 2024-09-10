@@ -49,7 +49,7 @@ Winthin Azure create a resource group for your resouces and have it named "Activ
 </p>
 <br />
 
-<h2>Deploying Active Directory ann create Admin Account<h2>
+<h2>Deploying Active Directory and create Admin Account<h2>
   
 <p>
 <img width="1373" alt="Screenshot 2024-09-10 at 2 22 45 PM" src="https://github.com/user-attachments/assets/54b28230-526f-4769-b828-e99914f5a87d">
