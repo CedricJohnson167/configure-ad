@@ -48,7 +48,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 Winthin Azure create a resource group for your resouces and have it named "Active-Directory"and have resource group located in your region.Next create a virtual network and subnet, and then go to virtual matchine and create it nameing it DC-1(for domain controller).Make sure the OS is operating as WINDOWS SERVER 2022, and username and password"anything thats good for you to remember" then hit review and create and create.After the vm is created set the network ip address to static and login and disable firewall.Now that the Domain Controller(Admin ACC) is created rinse and repeat for a Client VM with minor differences like, OS will be an Windows 10 system name it client-1 and make sure to attach vm to the same region and Vnet as DC-1.
 </p>
 <br />
-Deploying Active Directory ann create Admin Account
+
+<h2>Deploying Active Directory ann create Admin Account<h2>
 
 <p>
 <img width="1373" alt="Screenshot 2024-09-10 at 2 22 45 PM" src="https://github.com/user-attachments/assets/54b28230-526f-4769-b828-e99914f5a87d">
