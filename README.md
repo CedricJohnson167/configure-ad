@@ -27,7 +27,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 3 Add Over 2000+ randomly genderated user accounts via Powershell with in Direct Controller(ADMIN ACC)
 - Step 4 reset passwords, change password,and via Group policy and management accounts settings apply policy regarding account lockout attempts and login attempts 
 
-<h2>Deployment and Configuration Steps</h2>
+<h2> Step1:Deployment and Configuration Steps</h2>
 
 <p>
 <img width="1373" alt="Screenshot 2024-09-10 at 11 22 23 AM" src="https://github.com/user-attachments/assets/4edf052a-e96b-40cd-9756-83faf275c22a">
@@ -45,12 +45,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
   <img width="1373" alt="Screenshot 2024-09-10 at 11 32 01 AM" src="https://github.com/user-attachments/assets/ff251771-fc51-4f73-9d4d-7736548346ea">
 </p>
 <p>
-COMPLETED
   Winthin Azure create a resource group for your resouces and have it named "Active-Directory"and have resource group located in your region.Next create a virtual network and subnet, and then go to virtual matchine and create it nameing it DC-1(for domain controller).Make sure the OS is operating as WINDOWS SERVER 2022, and username and password"anything thats good for you to remember" then hit review and create and create.After the vm is created set the network ip address to static and login and disable firewall.Now that the Domain Controller(Admin ACC) is created rinse and repeat for a Client VM with minor differences like, OS will be an Windows 10 system name it client-1 and make sure to attach vm to the same region and Vnet as DC-1.
 </p>
 <br />
 
-<h2>Deploying Active Directory and create Admin Account<h2>
+<h2>Step 2 Deploying Active Directory and create Admin Account<h2>
   
 <p>
 <img width="1373" alt="Screenshot 2024-09-10 at 2 22 45 PM" src="https://github.com/user-attachments/assets/54b28230-526f-4769-b828-e99914f5a87d">
@@ -78,8 +77,7 @@ COMPLETED
 Now that Vms are extablished we are going to install active directory domain services and promote DC-1 as an actual DC"im going to setup a new forest as mydomain.com" then restart DC-1. now that its a actual DC the username to get into DC-1 vm is now mydomain.com\labuser"password still the same"and now that ACTIVE DIRECTORY is installed we are going to add a domain admin user with the domain.Going to Active directory users and computers create an organzation unit name emplyees and one name admins now we are going to create an admin(JANE DOE WILL BE MY DOMAIN ADMIN) username will be Jane_admin with a password of choosing.But because jane_admin is added to admins folder its not yet an admin untill we add jane_admin to SECURITY GROUPS,then after that log out of DC-1 AND Log backin as mydomain.com\jane_admin, and that will be our new admin account.Now login to Client-1 vm with original credintals and join it to the domain vm will restart,and after that log into DC-1 and verify Client-1 shows up in computers and Create a new Organization unit file and name it _Clients and drag Clinet-1 into there.
 </p>
 <br />
-
-<p>
+<h2>Step 3&4 add users via powershell and simulate password lockout and disable<h2>
 <img width="1225" alt="Screenshot 2024-09-10 at 5 52 25 PM" src="https://github.com/user-attachments/assets/1d293081-c11a-4aad-aadf-18478835baf5">
 <img width="1225" alt="Screenshot 2024-09-10 at 5 52 35 PM" src="https://github.com/user-attachments/assets/e3cc2852-1b0c-4a91-8dbf-6c03d4acac3f">
 <img width="1225" alt="Screenshot 2024-09-10 at 5 52 44 PM" src="https://github.com/user-attachments/assets/b8e8188f-5363-47c3-936f-a14b6bda8836">
