@@ -28,21 +28,48 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Step 4 reset passwords, change password,and via Group policy and management accounts settings apply policy regarding account lockout attempts and login attempts 
 
 <h2> Step1:Deployment and Configuration Steps</h2>
+Create a Resource Group
+<img width="1373" alt="Screenshot 2024-09-10 at 11 21 52 AM" src="https://github.com/user-attachments/assets/ccff2828-61c4-44d4-b7a6-3d96600e8bc3">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 22 23 AM" src="https://github.com/user-attachments/assets/703bef2b-aef3-4c93-9891-3a55cf7e33f4">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 22 41 AM" src="https://github.com/user-attachments/assets/209e89f9-7253-468c-97a5-7797fda46893">
+Create a Virtual Network and Subnet
+<img width="1373" alt="Screenshot 2024-09-10 at 11 23 43 AM" src="https://github.com/user-attachments/assets/bd54b824-277d-4e07-8899-6913e6a97834">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 25 18 AM" src="https://github.com/user-attachments/assets/1393340d-4e15-4465-bc25-74958d2b98e5">
 
-<p>
-<img width="1373" alt="Screenshot 2024-09-10 at 11 22 23 AM" src="https://github.com/user-attachments/assets/4edf052a-e96b-40cd-9756-83faf275c22a">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 25 18 AM" src="https://github.com/user-attachments/assets/694cbfbf-dca9-4c0b-8cfb-97962423758c">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 26 48 AM" src="https://github.com/user-attachments/assets/3a7b013b-fe72-4f2b-9eb7-e6d117173f2d">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 27 43 AM" src="https://github.com/user-attachments/assets/e83f5bb6-7198-420b-bb1b-26a1757de150">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 27 58 AM" src="https://github.com/user-attachments/assets/0afde7d7-5d2d-4e27-b0f5-cd847d4c021c">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 28 33 AM" src="https://github.com/user-attachments/assets/838a5fdf-b6a9-49c3-b720-9ab367f02b41">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 30 02 AM" src="https://github.com/user-attachments/assets/21566836-2d9c-4d87-aeda-2905bb0f55de">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 30 16 AM" src="https://github.com/user-attachments/assets/d235ea0e-feeb-48f3-98a2-76a1227c2ea0">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 30 34 AM" src="https://github.com/user-attachments/assets/b428fd99-ab91-430c-acd2-a97f1ff0ccc0">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 30 57 AM" src="https://github.com/user-attachments/assets/bbec08a7-5af1-42dd-aafb-da7f22f46efc">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 31 20 AM" src="https://github.com/user-attachments/assets/77661518-7c30-45fc-94b6-328ea738ae34">
-<img width="1373" alt="Screenshot 2024-09-10 at 11 31 56 AM" src="https://github.com/user-attachments/assets/46db1c22-b038-46dd-84e6-3b296b489e10">
-  <img width="1373" alt="Screenshot 2024-09-10 at 11 32 01 AM" src="https://github.com/user-attachments/assets/ff251771-fc51-4f73-9d4d-7736548346ea">
+Create the Domain Controller VM (Windows Server 2022) named “DC-1”
+<img width="1373" alt="Screenshot 2024-09-10 at 11 26 48 AM" src="https://github.com/user-attachments/assets/19d113f8-5450-4393-b476-f4f59d464f5d">
+
+* Username: labuser
+* Password: Cyberlab123!
+<img width="1373" alt="Screenshot 2024-09-10 at 11 27 43 AM" src="https://github.com/user-attachments/assets/f03648d5-18c4-4b56-8498-6309bd1b79ec">
+
+After VM is created, set Domain Controller’s NIC Private IP address to be static
+<img width="1373" alt="Screenshot 2024-09-10 at 11 30 27 AM" src="https://github.com/user-attachments/assets/626c4fa7-9c0f-43b7-a4c7-313107f3b3d5">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 30 34 AM" src="https://github.com/user-attachments/assets/6cf789da-0232-4c81-aba0-cd41fd3a88e9">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 30 43 AM" src="https://github.com/user-attachments/assets/17afdff4-c89b-4dd3-b00a-ab6d6a569c83">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 30 57 AM" src="https://github.com/user-attachments/assets/0be5d8e7-0581-47a5-b7b6-13c960fa50c9">
+
+Log into the VM and disable the Windows Firewall (for testing connectivity)
+<img width="1373" alt="Screenshot 2024-09-10 at 11 31 20 AM" src="https://github.com/user-attachments/assets/689120ca-27ef-41f1-aecf-0064fea6cec0">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 31 56 AM" src="https://github.com/user-attachments/assets/bdec37e6-613f-437e-b520-595be7097c31">
+![Uploading Screenshot 2024-09-10 at 11.32.01 AM.png…]()
+<img width="1373" alt="Screenshot 2024-09-10 at 11 32 33 AM" src="https://github.com/user-attachments/assets/c7f92306-53db-4632-97b2-47a09bbdb3fd">
+
+Setup Client-1 in Azure
+—
+Create the Client VM (Windows 10) named “Client-1”
+
+* Username: labuser
+* Password: Cyberlab123!
+Attach it to the same region and Virtual Network as DC-1
+After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
+From the Azure Portal, restart Client-1
+Login to Client-1
+Attempt to ping DC-1’s private IP address
+* Ensure the ping succeeded
+From Client-1, open PowerShell and run ipconfig /all
+* The output for the DNS settings should show DC-1’s private IP Address
+
 </p>
 <p>
   Winthin Azure create a resource group for your resouces and have it named "Active-Directory"and have resource group located in your region.Next create a virtual network and subnet, and then go to virtual matchine and create it nameing it DC-1(for domain controller).Make sure the OS is operating as WINDOWS SERVER 2022, and username and password"anything thats good for you to remember" then hit review and create and create.After the vm is created set the network ip address to static and login and disable firewall.Now that the Domain Controller(Admin ACC) is created rinse and repeat for a Client VM with minor differences like, OS will be an Windows 10 system name it client-1 and make sure to attach vm to the same region and Vnet as DC-1.
