@@ -58,16 +58,22 @@ Log into the VM and disable the Windows Firewall (for testing connectivity)
 Setup Client-1 in Azure
 —
 Create the Client VM (Windows 10) named “Client-1”
-
+<img width="1373" alt="Screenshot 2024-09-10 at 11 29 35 AM" src="https://github.com/user-attachments/assets/b963b87f-f3be-4ab8-852c-feb3fb988e4d">
 * Username: labuser
 * Password: Cyberlab123!
 Attach it to the same region and Virtual Network as DC-1
+<img width="1373" alt="Screenshot 2024-09-10 at 11 30 02 AM" src="https://github.com/user-attachments/assets/40ed9947-28de-4a72-96fc-212975aaa249">
 After VM is created, set Client-1’s DNS settings to DC-1’s Private IP address
+<img width="1373" alt="Screenshot 2024-09-10 at 11 33 01 AM" src="https://github.com/user-attachments/assets/9ae67e56-ddbc-44e5-a01b-a17cd84b166c">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 33 10 AM" src="https://github.com/user-attachments/assets/f914a477-abd0-4198-b134-4ffc6482dce7">
+<img width="1373" alt="Screenshot 2024-09-10 at 11 33 30 AM" src="https://github.com/user-attachments/assets/19f5696c-b432-463f-8c1b-df94db241e6d">
 From the Azure Portal, restart Client-1
 Login to Client-1
+<img width="1373" alt="Screenshot 2024-09-10 at 11 33 56 AM" src="https://github.com/user-attachments/assets/578c2606-4a6d-4e6a-87c9-f0f528d59f93">
 Attempt to ping DC-1’s private IP address
 * Ensure the ping succeeded
 From Client-1, open PowerShell and run ipconfig /all
+<img width="1373" alt="Screenshot 2024-09-10 at 11 34 07 AM" src="https://github.com/user-attachments/assets/59a6a877-3a14-4808-96b9-6df9bad3ffe8">
 * The output for the DNS settings should show DC-1’s private IP Address
 
 </p>
